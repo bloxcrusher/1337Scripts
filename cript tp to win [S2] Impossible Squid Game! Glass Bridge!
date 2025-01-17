@@ -1,0 +1,17 @@
+local ScreenGui = Instance.new("ScreenGui")
+local Button = Instance.new("TextButton")
+
+ScreenGui.Parent = game:GetService("CoreGui")
+Button.Parent = ScreenGui
+Button.Size = UDim2.new(0, 100, 0, 30)
+Button.Position = UDim2.new(0.5, -50, 0.5, -15)
+Button.Text = "Teleport"
+Button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+Button.MouseButton1Click:Connect(function()
+    local player = game.Players.LocalPlayer
+    local character = player.Character
+    if character then
+        character.HumanoidRootPart.CFrame = CFrame.new(-729, -3, -524)
+    end
+end)
